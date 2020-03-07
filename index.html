@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Musically.com</title>
+    <link rel="icon" type="img/png" href="/img/logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/js/jquery-3.2.1.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--HOJAS DE ESTILO CSS-->
+    <link rel="stylesheet" href="css/estilos-slider.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilo-menu.css">
+    <link rel="stylesheet" href="css/estilo-ventanaErrores.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+</head>
+
+<body>
+
+
+    <!--ENCABEZADO DE LA PAGINA-->
+
+    <header class="hero">
+        <header>
+            <div class="menu_bar">
+                <a class="bt-menu" href="javascript:void(0)"><i class="material-icons">
+                        menu
+                    </i>Menu</a>
+                </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="material-icons">home</i> Inicio</a></li>
+                    <li><a href="index-reproductor.html"><i class="material-icons">library_music</i> Reproductor</a>
+                    </li>
+                    <li><a href="#"><i class="material-icons">local_movies</i> Videos</a></li>
+                    <li><a href="#eventos"><i class="material-icons">local_activity</i> Eventos y Noticias</a></li>
+                    <li><a href="#"><i class="material-icons">priority_high</i> Acerca de</a></li>
+                    <li><a href="#contacto"><i class="material-icons">mail</i> Contactanos</a></li>
+
+                </ul>
+            </nav>
+           <script src="/js/menu.js"></script>
+        </header>
+
+
+
+        <div class="textos-hero">
+
+            <h1>Bienvenido a </h1>
+            <img src="/img/logo-header.png" alt="imagen">
+            <p>La música que quieras cuando quieras</p>
+
+        </div>
+        <div class="svg-hero" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+                preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+
+
+    <section class="wave-contenedor website">
+        <img src="img/ilustracion1.jpg" alt="">
+        <div class="contenedor-textos-main">
+            <h2 class="titulo left">Greatest Hits</h2>
+            <p class="parrafo">Podrás ver videos y escuchar
+                gran variedad de artistas que estan sonando actualmente en todas las estaciones de radio!</p>
+        </div>
+    </section>
+
+    <!--SLIDER DE CONTENIDO-->
+    <div class="contenedor">
+        <div class="slider-contenedor">
+            <section class="contenido-slider">
+
+                <div>
+                    <h2>Puedes escuchar variedad de música en nuestro reproductor.</h2>
+                    <a href="#">Ver más</a>
+                </div>
+                <img src="/img/reproductor.jpg" alt="Reproductor">
+
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>Puedes ver los videos de tus artistas favoritos.</h2>
+                    <a href="#">Ver más</a>
+                </div>
+                <img src="/img/video.png" alt="Videos">
+
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>Disfruta de todos los generos musicales que tenemos para ti.</h2>
+
+                </div>
+                <img src="/img/generos.jpg" alt="generos">
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>Puedes escuchar variedad de música en nuestro reproductor.</h2>
+                    <a href="#">Ver más</a>
+                </div>
+                <img src="/img/reproductor.jpg" alt="Reproductor">
+            </section>
+        </div>
+        <script src="/js/slider.js"></script>
+    </div>
+
+
+    <div id="eventos"></div>
+    <section class="eventos">
+        <div class="contenedor">
+            <h2 class="titulo">Mantente al tando de eventos cerca de ti</h2>
+            <article class="eventos-cont">
+
+                <!--Eventos Cerca-->
+                <img src="/img/calendario.png" alt="" height="290" width="200">
+
+                <a class="twitter-timeline" data-width="700" data-height="440" data-theme="dark"
+                    href="https://twitter.com/backstagemcr?ref_src=twsrc%5Etfw">Tweets by backstagemcr</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+                <h2 class="titulo">y las últimas noticias del mundo musical.</h2><br>
+                <a class="twitter-timeline" data-width="700" data-height="440" data-theme="ligth"
+                    href="https://twitter.com/thebackstageweb">Tweets by thebackstageweb</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+                <!--Script para introducir el boton me gusta de facebook-->
+
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous"
+                    src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="500"
+                    data-layout="standard" data-action="like" data-size="small" data-share="true">
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+    <section class="info-last">
+        <div class="contenedor last-section">
+            <div class="contenedor-textos-main">
+                <h2 class="titulo left">Úbicanos</h2>
+                <p class="parrafo">Podrás ubicar nuestras oficinas desde Google Maps.</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1651.986024279722!2d-84.2166581188257!3d10.008014228792245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f9b8106ae04b%3A0x95eeb17783362f9d!2sUniversidad%20T%C3%A9cnica%20Nacional%20(UTN)!5e0!3m2!1ses!2scr!4v1582066448924!5m2!1ses!2scr"
+                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+            </div>
+            <img src="img/ubicacion.png" alt="ubicación">
+        </div>
+
+        <div class="svg-wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+                preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #f5576c;"></path>
+            </svg></div>
+    </section>
+
+    <footer id="contacto">
+        <div class="contenedor">
+            <h2 class="titulo">Contact us</h2>
+            <form class="form" method="POST" action="/php/FormContacto.php">
+                <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input class="input" type="email" name="email" id="email" placeholder="Email">
+                <textarea class="input" name="mensaje" id="mensaje" cols="30" rows="10"
+                    placeholder="Mensaje"></textarea>
+                <input class="input" type="submit" id="btnsend" value="Enviar">
+                <script src="/js/contacto.js"></script>
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>

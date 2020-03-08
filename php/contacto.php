@@ -13,5 +13,5 @@ $cuerpo = "Correo: $email\n";
 $cuerpo = "Mensaje: $mensaje\n";
 
 mail($para,$asunto,utf8_decode($cuerpo));
-header('Location:NewMessage.html')
+header("Location:NewMessage.html")
 ?>

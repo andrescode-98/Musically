@@ -49,8 +49,8 @@
                     <li><a href="#contacto"><i class="material-icons">mail</i> Contactanos</a></li>
 
                 </ul>
+                <script src="js/menu.js"></script>
             </nav>
-           <script src="js/menu.js"></script>
         </header>
 
 
@@ -174,15 +174,15 @@
     <footer id="contacto">
         <div class="contenedor">
             <h2 class="titulo">Contact us</h2>
-            <form class="form" method="POST" action="php/FormContacto.php">
-                <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                <input class="input" type="email" name="email" id="email" placeholder="Email">
+            <form class="form" action="php/contacto.php" method="POST">
+                <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                <input class="input" type="email" name="email" id="email" placeholder="Email" required>
                 <textarea class="input" name="mensaje" id="mensaje" cols="30" rows="10"
-                    placeholder="Mensaje"></textarea>
+                    placeholder="Mensaje" required></textarea>
                 <input class="input" type="submit" id="btnsend" value="Enviar">
-                <script src="js/contacto.js"></script>
             </form>
         </div>
+        <script src="js/contacto.js"></script>
     </footer>
 </body>
 

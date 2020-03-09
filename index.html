@@ -11,8 +11,16 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <script src="js/jquery-3.2.1.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+     <!--Script del google maps-->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false&key=AIzaSyDPKWBrWv1lGHtOD5YlRjOtJNg3p21hMSQ">
+    </script>
+
+    
 
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -109,7 +117,6 @@
                 </div>
                 <img src="img/reproductor.jpg" alt="Reproductor">
             </section>
-            <script src="js/slider.js"></script>
         </div>
     </div>
 
@@ -152,10 +159,99 @@
             <div class="contenedor-textos-main">
                 <h2 class="titulo left">Úbicanos</h2>
                 <p class="parrafo">Podrás ubicar nuestras oficinas desde Google Maps.</p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1651.986024279722!2d-84.2166581188257!3d10.008014228792245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f9b8106ae04b%3A0x95eeb17783362f9d!2sUniversidad%20T%C3%A9cnica%20Nacional%20(UTN)!5e0!3m2!1ses!2scr!4v1582066448924!5m2!1ses!2scr"
-                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
+                <div id="map" style="width:500px; height:315px;" class="mapa">
+                    <!--Aquí va el mapa-->
+                </div>
+                <script type="text/javascript">
+                     var divMapa = document.getElementById('map');
+                navigator.geolocation.getCurrentPosition(fn_ok, fn_mal);
+
+
+                //Consula sobre ubicación al usuario y control de los errores posibles
+                function fn_mal(error) {
+                    var msj;
+                    switch (error.code) {
+                        case error.PERMISSION_DENIED:
+                            msj = "el usuario ha denegado el permiso de ubicación";
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            msj = "la ubicación no ha podido ser encontrada";
+                            break;
+                        case error.TIMEOUT:
+                            msj = "el tiempo de espera se excedió";
+                            break;
+                        default:
+                            msj = "error desconocido";
+                    }
+                    alert('La ubicación no pudo ser accesada debido a que ' + msj)
+                }
+
+
+
+                function fn_ok(respuesta) {
+                    var lat = respuesta.coords.latitude;
+                    var lon = respuesta.coords.longitude;
+
+                    var gLatLonUsuario = new google.maps.LatLng(lat, lon);   //Posición actual
+                    var gLatLonFijo = new google.maps.LatLng(9.98817, -84.2434);  //Punto 10.056998, -84.274898
+                    var objConfig = {
+                        zoom: 5,
+                        center: gLatLonFijo
+                    }
+                    var gMapa = new google.maps.Map(divMapa, objConfig);
+                    var objConfigMarkerFijo = {
+                        position: gLatLonFijo,
+                        map: gMapa,
+
+
+                    }
+                    var objConfigMarkerUsuario = {
+                        position: gLatLonUsuario,
+                        map: gMapa,
+                        title: "Esta es su ubicación actual",
+                        height: '2px',
+                        width: '2px'
+                    }
+
+                    var gMarkerFijo = new google.maps.Marker(objConfigMarkerFijo);
+                    var gMarkerUsuario = new google.maps.Marker(objConfigMarkerUsuario);
+
+                    var objConfigDR = {
+                        map: gMapa
+                    }
+
+
+
+
+                    var objConfigDS = {
+                        origin: gLatLonFijo,
+                        destination: gLatLonUsuario,
+                        travelMode: google.maps.TravelMode.DRIVING
+                    }
+
+
+                    //Obtiene las coordenadas de la dirección
+                    var ds = new google.maps.DirectionsService();
+
+                    //Pasa las coordenadas a una ruta que se pueda ver en el mapa
+                    var dr = new google.maps.DirectionsRenderer(
+                        objConfigDR
+                    );
+
+                    ds.route(objConfigDS, fnRutear);
+
+
+                    //Ruta entre ambos puntos
+                    function fnRutear(resultados, status) {
+                        if (status == 'OK') {
+                            dr.setDirections(resultados);
+                        } else {
+                            alert('Error' + status);
+                        }
+                    }
+                }
+                </script>
             </div>
             <img src="img/ubicacion.png" alt="ubicación">
         </div>

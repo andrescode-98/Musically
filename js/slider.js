@@ -1,3 +1,6 @@
+
+
+window.onload = function () {
 let slider = document.querySelector(".slider-contenedor")//contiene el slider
 let sliderIndividual = document.querySelectorAll(".contenido-slider")//selecciona todos los elementos de contenido slider
 let contador = 1;
@@ -24,4 +27,5 @@ function slides(){
             contador=1;
         },4000)
     }
+}
 }

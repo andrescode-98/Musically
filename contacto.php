@@ -4,12 +4,12 @@ if(isset($_POST['submit'])){
     require 'php/PHPMailerAutoload.php';
     $mail = new PHPMailer;
     $mail->isSMTP();
-    $mail->Host='smtp.gmail.com';
+    $mail->Host='smtp.yopmail.com';
     $mail->Port=587; // un puerto que no este bloqueado
     $mail->SMTPAuth=true;
     $mail->SMTPSecure='tls'; //hace que la conexion sea segura
-    $mail->Username= 'andres150098@gmail.com';
-    $mail->Password= '2fbe131bc7';
+    $mail->Username= 'musicallycr@yopmail.com';
+    $mail->Password= '';
 
     $mail->setFrom($_POST['email'],$_POST['nombre']);//obtiene correo y nombre del ususario
     $mail->addAddress('musicallycr@yopmail.com');

@@ -1,17 +1,28 @@
 <?php
-//llamando los campos
-$nombre = $_POST["nombre"];
-$email = $_POST["email"];
-$mensaje = $_POST["mensaje"];
+$result="";
+if(isset($_POST['submit'])){
+    require 'php/PHPMailerAutoload.php';
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+    $mail->Host='smtp.yopmail.com';
+    $mail->Port=587; // un puerto que no este bloqueado
+    $mail->SMTPAuth=true;
+    $mail->SMTPSecure='tls'; //hace que la conexion sea segura
+    $mail->Username= 'musicallycr@yopmail.com';
+    $mail->Password= '143186@AndresyNathan';
 
-//datos para el correo
-$para = "musicallycr@yopmail.com";
-$asunto = "Nuevo Mensaje de $nombre";
+    $mail->setFrom($_POST['email'],$_POST['nombre']);//obtiene correo y nombre del ususario
+    $mail->addAddress('musicallycr@yopmail.com');
+    $mail->addReplyTo($_POST['email'],$_POST['nombre']);
 
-$cuerpo = "De: $nombre\n";
-$cuerpo = "Correo: $email\n";
-$cuerpo = "Mensaje: $mensaje\n";
+    $mail->isHTML(true);
+    $mail->Subject='Correo Enviado Por: '.$_POST['nombre'];
+    $mail->Body='Nombre: '.$_POST['nombre'].'<br>Email: '.$_POST['email'].'<br>Mensaje : '.$_POST['mensaje'];
 
-mail($para,$asunto,utf8_decode($cuerpo));
-header('Location:NewMessage.html')
+    if(!$mail->send()){
+       $result = "Algo salio mal, Intentalo de nuevo.";
+    }else{
+        $result='location:NewMessage.html';
+    }
+}
 ?>

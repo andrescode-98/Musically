@@ -10,6 +10,6 @@ $header = 'Enviado desde Musically.com';
 $mensajecompleto = $mensaje . "\nAtentamente: " . $nombre;
 
 mail($destinatario,$correo,$mensajecompleto,$header);
-echo "<script>alert(\"location.href=NewMessage.html'\")</script>"
+echo "<script>alert(\"location.href='NewMessage.html'\")</script>"
 
 ?>

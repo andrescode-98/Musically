@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
     if(!$mail->send()){
        $result = "Algo salio mal, Intentalo de nuevo.";
     }else{
-        $result='location:NewMessage.html';
+        $result="location:NewMessage.html";
     }
 }
 ?>

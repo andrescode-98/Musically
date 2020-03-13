@@ -23,7 +23,6 @@
                     menu
                     </i>Menu</a>
             </div>
-
             <nav>
                 <ul>
                     <li><a href="index.html"><i class="material-icons">home</i> Inicio</a></li>
@@ -36,12 +35,16 @@
                 <script src="js/menu.js"></script>
             </nav>
         </header>
-
+        
         <div class="textos-hero">
             <h1>Reproductor de Videos</h1>
-
             <p>Encuentra los videos de tus artistas favoritos</p>
+            <video onloadedmetadata="this.muted=true" autoplay loop> <source src="img/fondo-video.mp4"> </video>
         </div>
+        <br> <br> 
+
+    
+            <!--Le da la ondulacion a la pagina-->   
         <div class="svg-hero" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
                 preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
@@ -51,11 +54,11 @@
 
 
     
-        <fom class="form bloq" action="buscar-(buscar)">
-            <link rel="stylesheet" href="js/Busqueda.js">
+        <form class="form bloq" action="">
+            <link rel="stylesheet" href="">
             <input type="text" placeholder="Buscar Videos...">
             <i class="ic ic-search"></i>
-        </fom>
+        </form>
 
         
 

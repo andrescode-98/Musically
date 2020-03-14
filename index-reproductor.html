@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Musically-Reproductor</title>
@@ -37,8 +38,9 @@
 
         <div class="textos-hero">
             <h1>Reproductor de Música</h1>
-
             <p>Encuentra tu música favorita en nuestro reproductor</p>
+            <video onloadedmetadata="this.muted=true" autoplay loop>
+                <source src="img/video-reproductor.mp4"> </video>
         </div>
         <div class="svg-hero" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
                 preserveAspectRatio="none" style="height: 100%; width: 100%;">
@@ -49,11 +51,11 @@
 
 
     
-        <fom class="form bloq" action="buscar-(buscar)">
-            <link rel="stylesheet" href="js/Busqueda.js">
+        <form class="form bloq" action="">
+            <link rel="stylesheet" href="">
             <input type="text" placeholder="Buscar canciones o Albumes...">
             <i class="ic ic-search"></i>
-        </fom>
+        </form>
 
         
 

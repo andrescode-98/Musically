@@ -91,7 +91,8 @@
             <div class="container-text">
                 <h1>Musically.com</h1>
                 <img src="img/logo-header.png" alt="Logo" height="50%" width="60%">
-                <p>Musically.com Es una pagina web creada por dos estudiantes universitario de la carrera de Ing.Software de
+                <p>Musically.com Es una pagina web creada por dos estudiantes universitario de la carrera de
+                    Ing.Software de
                     la Universidad Técnica Nacional(UTN).</p>
                 <p>Como propuesta al proyecto final del curso de apliciones en entorno web.</p>
             </div>
@@ -287,8 +288,39 @@
             <form class="form" action="contacto.php" method="POST">
                 <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                 <input class="input" type="email" name="email" id="email" placeholder="Email" required>
+                <input name="fecha" id="fecha" type="date" class="input" max="2020-12-31" required>
+                <script type="text/javascript">
+                    function fechaActual() {
+                        var hoy = new Date();
+                        var dd = hoy.getDate();
+                        var mm = hoy.getMonth() + 1;
+                        var yyyy = hoy.getFullYear();
+                        if (dd < 10) {
+                            dd = '0' + dd;
+                        }
+
+                        if (mm < 10) {
+                            mm = '0' + mm;
+                        }
+                        return yyyy + '-' + mm + '-' + dd;
+                    }
+                </script>
+                <select name="gradoacademico" class="input" id="grado" type="select" required>
+                    <option>Primaria incompleta</option>
+                    <option>Primaria completa</option>
+                    <option>Secundaria incompleta</option>
+                    <option>Secundaria completa</option>
+                    <option>Educación superior incompleta</option>
+                    <option>Educación superior completa</option>
+                </select>
                 <textarea class="input" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"
                     required></textarea>
+                    <p>
+                        Seleccione su género:<br>
+                        <label><input type="radio" name="genero" value="masculino" class="input"  id="genero"> Masculino</label><br>
+                        <label><input type="radio" name="genero" value="femenino" class="input"   id="genero"> Femenino</label><br>
+                        <label><input type="radio" name="genero" value="indefinido" class="input" id="genero"> Indefinido</label>
+                      </p><br><br>
                 <input class="input" type="submit" id="btnsend" value="Enviar">
             </form>
         </div>

@@ -5,14 +5,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
 
-body,
-html{
-    background:black;
-}
 
 .btn-open-popup{
     position: absolute;
@@ -21,7 +17,7 @@ html{
     transform: translate(-50%, -50%);
     color: #D90C43;
     display: block;
-    background: white;
+    background: rgb(31, 29, 29);
     padding: 20px 50px;
     border-radius: 50px;
 }
@@ -69,7 +65,7 @@ html{
 
 .img{
     width: 40%;
-    background-image: url(../image/img4.jpg);
+    background-image: url();
     background-size: cover;
     background-position: center;
 }

@@ -14,12 +14,12 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-     <!--Script del google maps-->
+    <!--Script del google maps-->
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false&key=AIzaSyDPKWBrWv1lGHtOD5YlRjOtJNg3p21hMSQ">
-    </script>
+        src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false&key=AIzaSyDPKWBrWv1lGHtOD5YlRjOtJNg3p21hMSQ">
+        </script>
 
-    
+
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
@@ -29,9 +29,8 @@
     <link rel="stylesheet" href="css/estilo-menu.css">
     <link rel="stylesheet" href="css/estilo-ventanaErrores.css">
     <link rel="stylesheet" href="css/font-awesome.css">
-  
-    
-    
+    <link rel="stylesheet" href="css/estilo-acercade.css">
+
 
 </head>
 
@@ -45,7 +44,7 @@
                 <a class="bt-menu" href="javascript:void(0)"><i class="material-icons">
                         menu
                     </i>Menu</a>
-                </div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#"><i class="material-icons">home</i> Inicio</a></li>
@@ -53,9 +52,9 @@
                     </li>
                     <li><a href="index-videos.html"><i class="material-icons">local_movies</i> Videos</a></li>
                     <li><a href="#eventos"><i class="material-icons">local_activity</i> Eventos y Noticias</a></li>
-                    <li><a href="#"><i class="material-icons">priority_high</i> Acerca de</a></li>
+                    <li><a href="#modal"><i class="material-icons">priority_high</i> Acerca de</a></li>
                     <li><a href="#contacto"><i class="material-icons">mail</i> Contactanos</a></li>
-    
+
                 </ul>
                 <script src="js/menu.js"></script>
             </nav>
@@ -85,11 +84,27 @@
         </div>
     </section>
 
+    <!--VENTANA MODAL-->
+    <div class="container-all" id="modal">
+        <div class="popup">
+            <div class="img"></div>
+            <div class="container-text">
+                <h1>Musically.com</h1>
+                <img src="img/logo-header.png" alt="Logo" height="50%" width="60%">
+                <p>Musically.com Es una pagina web creada por dos estudiantes universitario de la carrera de Ing.Software de
+                    la Universidad Técnica Nacional(UTN).</p>
+                <p>Como propuesta al proyecto final del curso de apliciones en entorno web.</p>
+            </div>
+
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+    </div>
+
     <!--SLIDER DE CONTENIDO-->
     <div class="contenedor">
         <div class="slider-contenedor">
             <section class="contenido-slider">
-                
+
                 <div>
                     <h2>Puedes escuchar variedad de música en nuestro reproductor.</h2>
                     <a href="index-reproductor.html">Ver más</a>
@@ -135,7 +150,7 @@
 
                 <a class="twitter-timeline" data-width="700" data-height="440" data-theme="dark"
                     href="https://twitter.com/backstagemcr?ref_src=twsrc%5Etfw">Tweets by backstagemcr</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
                 <h2 class="titulo">y las últimas noticias del mundo musical.</h2><br>
@@ -167,93 +182,93 @@
                     <!--Aquí va el mapa-->
                 </div>
                 <script type="text/javascript">
-                     var divMapa = document.getElementById('map');
-                navigator.geolocation.getCurrentPosition(fn_ok, fn_mal);
+                    var divMapa = document.getElementById('map');
+                    navigator.geolocation.getCurrentPosition(fn_ok, fn_mal);
 
 
-                //Consula sobre ubicación al usuario y control de los errores posibles
-                function fn_mal(error) {
-                    var msj;
-                    switch (error.code) {
-                        case error.PERMISSION_DENIED:
-                            msj = "el usuario ha denegado el permiso de ubicación";
-                            break;
-                        case error.POSITION_UNAVAILABLE:
-                            msj = "la ubicación no ha podido ser encontrada";
-                            break;
-                        case error.TIMEOUT:
-                            msj = "el tiempo de espera se excedió";
-                            break;
-                        default:
-                            msj = "error desconocido";
-                    }
-                    alert('La ubicación no pudo ser accesada debido a que ' + msj)
-                }
-
-
-
-                function fn_ok(respuesta) {
-                    var lat = respuesta.coords.latitude;
-                    var lon = respuesta.coords.longitude;
-
-                    var gLatLonUsuario = new google.maps.LatLng(lat, lon);   //Posición actual
-                    var gLatLonFijo = new google.maps.LatLng(9.98817, -84.2434);  //Punto 10.056998, -84.274898
-                    var objConfig = {
-                        zoom: 5,
-                        center: gLatLonFijo
-                    }
-                    var gMapa = new google.maps.Map(divMapa, objConfig);
-                    var objConfigMarkerFijo = {
-                        position: gLatLonFijo,
-                        map: gMapa,
-
-
-                    }
-                    var objConfigMarkerUsuario = {
-                        position: gLatLonUsuario,
-                        map: gMapa,
-                        title: "Esta es su ubicación actual",
-                        height: '2px',
-                        width: '2px'
-                    }
-
-                    var gMarkerFijo = new google.maps.Marker(objConfigMarkerFijo);
-                    var gMarkerUsuario = new google.maps.Marker(objConfigMarkerUsuario);
-
-                    var objConfigDR = {
-                        map: gMapa
+                    //Consula sobre ubicación al usuario y control de los errores posibles
+                    function fn_mal(error) {
+                        var msj;
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                msj = "el usuario ha denegado el permiso de ubicación";
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                msj = "la ubicación no ha podido ser encontrada";
+                                break;
+                            case error.TIMEOUT:
+                                msj = "el tiempo de espera se excedió";
+                                break;
+                            default:
+                                msj = "error desconocido";
+                        }
+                        alert('La ubicación no pudo ser accesada debido a que ' + msj)
                     }
 
 
 
+                    function fn_ok(respuesta) {
+                        var lat = respuesta.coords.latitude;
+                        var lon = respuesta.coords.longitude;
 
-                    var objConfigDS = {
-                        origin: gLatLonFijo,
-                        destination: gLatLonUsuario,
-                        travelMode: google.maps.TravelMode.DRIVING
-                    }
-
-
-                    //Obtiene las coordenadas de la dirección
-                    var ds = new google.maps.DirectionsService();
-
-                    //Pasa las coordenadas a una ruta que se pueda ver en el mapa
-                    var dr = new google.maps.DirectionsRenderer(
-                        objConfigDR
-                    );
-
-                    ds.route(objConfigDS, fnRutear);
+                        var gLatLonUsuario = new google.maps.LatLng(lat, lon);   //Posición actual
+                        var gLatLonFijo = new google.maps.LatLng(9.98817, -84.2434);  //Punto 10.056998, -84.274898
+                        var objConfig = {
+                            zoom: 5,
+                            center: gLatLonFijo
+                        }
+                        var gMapa = new google.maps.Map(divMapa, objConfig);
+                        var objConfigMarkerFijo = {
+                            position: gLatLonFijo,
+                            map: gMapa,
 
 
-                    //Ruta entre ambos puntos
-                    function fnRutear(resultados, status) {
-                        if (status == 'OK') {
-                            dr.setDirections(resultados);
-                        } else {
-                            alert('Error' + status);
+                        }
+                        var objConfigMarkerUsuario = {
+                            position: gLatLonUsuario,
+                            map: gMapa,
+                            title: "Esta es su ubicación actual",
+                            height: '2px',
+                            width: '2px'
+                        }
+
+                        var gMarkerFijo = new google.maps.Marker(objConfigMarkerFijo);
+                        var gMarkerUsuario = new google.maps.Marker(objConfigMarkerUsuario);
+
+                        var objConfigDR = {
+                            map: gMapa
+                        }
+
+
+
+
+                        var objConfigDS = {
+                            origin: gLatLonFijo,
+                            destination: gLatLonUsuario,
+                            travelMode: google.maps.TravelMode.DRIVING
+                        }
+
+
+                        //Obtiene las coordenadas de la dirección
+                        var ds = new google.maps.DirectionsService();
+
+                        //Pasa las coordenadas a una ruta que se pueda ver en el mapa
+                        var dr = new google.maps.DirectionsRenderer(
+                            objConfigDR
+                        );
+
+                        ds.route(objConfigDS, fnRutear);
+
+
+                        //Ruta entre ambos puntos
+                        function fnRutear(resultados, status) {
+                            if (status == 'OK') {
+                                dr.setDirections(resultados);
+                            } else {
+                                alert('Error' + status);
+                            }
                         }
                     }
-                }
                 </script>
             </div>
             <img src="img/ubicacion.png" alt="ubicación" height="50%" width="60%">
@@ -262,22 +277,23 @@
         <div class="svg-wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
                 preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #f5576c;"></path>
+                    style="stroke: none; fill: #000000d0;"></path>
             </svg></div>
     </section>
 
     <footer id="contacto">
         <div class="contenedor">
             <h2 class="titulo">Contact us</h2>
-            <form class="form" action="contacto.php" method="POST" >
+            <form class="form" action="contacto.php" method="POST">
                 <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                 <input class="input" type="email" name="email" id="email" placeholder="Email" required>
-                <textarea class="input" name="mensaje" id="mensaje" cols="30" rows="10"
-                    placeholder="Mensaje" required></textarea>
+                <textarea class="input" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"
+                    required></textarea>
                 <input class="input" type="submit" id="btnsend" value="Enviar">
             </form>
         </div>
         <script src="js/contacto.js"></script>
     </footer>
 </body>
+
 </html>

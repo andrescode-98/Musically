@@ -5,6 +5,7 @@ $empresa = $_POST['mensaje'];
 $fechaNacimiento = $_POST['fecha'];
 $grado = $_POST['grado'];
 $genero = $_POST['genero'];
+$edad = 2020-($fechaNacimiento);
 
 $header = 'From: ' . $mail . " \r\n";
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
@@ -13,7 +14,7 @@ $header .= "Content-Type: text/plain";
 
 $mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
 $mensaje .= "Su e-mail es: " . $mail . " \r\n";
-$mensaje .= "Su edad es: " . $fechaNacimiento . " \r\n";
+$mensaje .= "Su edad es: " . $edad . " años \r\n";
 $mensaje .= "Su grado academico es: " . $grado . " \r\n";
 $mensaje .= "Su género es: " . $genero . " \r\n";
 $mensaje .= "Mensaje: " . $_POST['mensaje'] . " \r\n";

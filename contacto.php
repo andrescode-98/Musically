@@ -5,7 +5,8 @@ $empresa = $_POST['mensaje'];
 $fechaNacimiento = $_POST['fecha'];
 $grado = $_POST['grado'];
 $genero = $_POST['genero'];
-$edad = 2020-($fechaNacimiento);
+$añoactual = 2020;
+$edad = $añoactual-($fechaNacimiento);
 
 $header = 'From: ' . $mail . " \r\n";
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
@@ -23,7 +24,7 @@ $mensaje .= "Enviado el " . date('d/m/Y', time());
 $para = 'andres150098@gmail.com';
 $asunto = 'Mensaje de Musically.com';
 
-mail($para, $asunto, utf8_decode($mensaje), $header);
+mail($para, $asunto, $mensaje, $header);
 
 header("Location:NewMessage.html");
 ?>

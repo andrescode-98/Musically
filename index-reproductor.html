@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Musically-Reproductor</title>
+
+
     <link rel="icon" type="img/png" href="img/logo.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilo-reproductor.css">
     <link rel="stylesheet" href="css/estilo-menu.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo-acercade.css">
+
+
     <script src="js/jquery-3.2.1.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
@@ -29,7 +34,7 @@
                 <ul>
                     <li><a href="index.html"><i class="material-icons">home</i> Inicio</a></li>
                     <li><a href="index-videos.html"><i class="material-icons">local_movies</i> Videos</a></li>
-                    <li><a href="#"><i class="material-icons">priority_high</i> Acerca de</a></li>
+                    <li><a href="#modal"><i class="material-icons">priority_high</i> Acerca de</a></li>
 
                 </ul>
                 <script src="js/menu.js"></script>
@@ -49,7 +54,20 @@
             </svg></div>
     </header>
 
-
+    <!--VENTANA MODAL-->
+    <div class="content" id="modal">
+        <div class="popup">
+            <div class="img"></div>
+            <div class="container-text">
+                <h1>Musically.com</h1>
+                <img src="img/logo-header.png" alt="Logo" height="50%" width="60%">
+                <p>Musically.com Es una pagina web creada por dos estudiantes universitarios de la carrera de
+                    Ing.Software de la Universidad Técnica Nacional(UTN).</p>
+                <p>Como propuesta al proyecto final del curso de apliciones en entorno web.</p>
+            </div>
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+    </div>
 
     <form class="form bloq" action="">
         <link rel="stylesheet" href="">
@@ -58,15 +76,18 @@
     </form>
     <br><br>
 
-    <div id="cp_widget_58654fe6-b6b1-4251-bfc0-b2d1ea062a19">...</div><script type="text/javascript">
-        var cpo = []; cpo["_object"] ="cp_widget_58654fe6-b6b1-4251-bfc0-b2d1ea062a19"; cpo["_fid"] = "AYKARre0K91p";
+    <div id="cp_widget_58654fe6-b6b1-4251-bfc0-b2d1ea062a19">...</div>
+    <script type="text/javascript">
+        var cpo = []; cpo["_object"] = "cp_widget_58654fe6-b6b1-4251-bfc0-b2d1ea062a19"; cpo["_fid"] = "AYKARre0K91p";
         var _cpmp = _cpmp || []; _cpmp.push(cpo);
-        (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-        cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-        var c = document.getElementsByTagName("script")[0];
-        c.parentNode.insertBefore(cp, c); })(); </script>
+        (function () {
+            var cp = document.createElement("script"); cp.type = "text/javascript";
+            cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+            var c = document.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(cp, c);
+        })(); </script>
 
-<br><br><br><br>
+    <br><br><br><br>
 
 </body>
 

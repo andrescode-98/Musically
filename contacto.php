@@ -1,7 +1,8 @@
 <?php
+ob_start();
 $nombre = $_POST['nombre'];
 $mail = $_POST['email'];
-$empresa = $_POST['mensaje'];
+$cuerpo = $_POST['mensaje'];
 $fechaNacimiento = $_POST['fecha'];
 $grado = $_POST['grado'];
 $genero = $_POST['genero'];

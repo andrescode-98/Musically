@@ -289,22 +289,6 @@
                 <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                 <input class="input" type="email" name="email" id="email" placeholder="Email" required>
                 <input name="fecha" id="fecha" type="date" class="input" max="2020-12-31" required>
-                <script type="text/javascript">
-                    function fechaActual() {
-                        var hoy = new Date();
-                        var dd = hoy.getDate();
-                        var mm = hoy.getMonth() + 1;
-                        var yyyy = hoy.getFullYear();
-                        if (dd < 10) {
-                            dd = '0' + dd;
-                        }
-
-                        if (mm < 10) {
-                            mm = '0' + mm;
-                        }
-                        return yyyy + '-' + mm + '-' + dd;
-                    }
-                </script>
                 <select name="grado" class="input" id="grado" type="select" required>
                     <option>Primaria incompleta</option>
                     <option>Primaria completa</option>

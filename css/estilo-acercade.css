@@ -55,10 +55,13 @@
 
 
 .img{
-    width: 60%;
-    background-image: url();
+    width: 25%;
+    height: 40%;
+    margin-left: 100px;
+    margin-right: 50px;
+    background-image: url(/img/Autor.png);
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 .container-text{

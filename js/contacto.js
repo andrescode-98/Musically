@@ -28,6 +28,14 @@ $(document).ready(function(){
             $('#mensaje').css("border-bottom-color", "#d1d1d1")
         }
 
+         // Validado fecha ==============================
+        if( $('#fecha').val() == '' ){
+            errores += '<p>Ingrese su fecha de nacimiento</p>';
+            $('#fecha').css("border-bottom-color", "#F14B4B")
+        } else{
+            $('#fecha').css("border-bottom-color", "#d1d1d1")
+        }
+
         // ENVIANDO MENSAJE ============================
         if( errores == '' == false){
             var mensajeModal = '<div class="modal_wrap">'+

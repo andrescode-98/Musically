@@ -285,8 +285,9 @@
             <form class="form" action="contacto.php" method="POST">
                 <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                 <input class="input" type="email" name="email" id="email" placeholder="Email" required>
-                <input name="fecha" id="fecha" type="date" class="input" max="2020-12-31" placeholder="Fecha de Nacimiento" required>
+                <input name="fecha" id="fecha" type="date" class="input" max="2020-12-31" required>
                 <select name="grado" class="input" id="grado" type="select" required>
+                    <option selected="true" disabled="disabled">Seleccione su nivel de escolaridad</option>
                     <option>Primaria incompleta</option>
                     <option>Primaria completa</option>
                     <option>Secundaria incompleta</option>

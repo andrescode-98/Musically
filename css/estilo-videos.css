@@ -70,6 +70,17 @@ video{
     width: 100%;
 }
 
+input[type="submit"]{
+    width: 120px;
+    text-align: center;
+    padding: 14px 0;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    color: tomato;
+    background: #fff;
+}
 
 @media screen and (max-width:800px){
     .textos-hero h1{

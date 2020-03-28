@@ -71,13 +71,29 @@ body{
 }
 .contenedor{
     padding: 80px 0;
+    margin-left: 150px;
 }
+
+.contenedor-2{
+    padding: 80px 0;
+    margin-left: 450px;
+}
+
 
 .titulo{
     font-weight: 300;
     font-size: 35px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
+    justify-content: center;
+    
+}
+.titulo-2{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+    justify-content: center;
 }
 
 .titulo.left{
@@ -136,12 +152,12 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     overflow: hidden;
 }
 
 .eventos-cont>img{
-    width: 30%;
+    width: 20%;
     object-fit: cover;
     margin-bottom: 20px;
     display: block;
@@ -160,7 +176,8 @@ body{
 }
 
 .last-section img{
-    width: 48%;
+    width: 35%;
+    margin-top: 200px;
 }
 
 .last-section .contenedor-textos-main{

@@ -73,16 +73,6 @@
             </svg></div>
     </header>
 
-
-    <section class="wave-contenedor website">
-        <img src="img/ilustracion1.jpg" alt="">
-        <div class="contenedor-textos-main">
-            <h2 class="titulo left">Greatest Hits</h2>
-            <p class="parrafo">Podrás ver videos y escuchar
-                gran variedad de artistas que estan sonando actualmente en todas las estaciones de radio!</p>
-        </div>
-    </section>
-
     <!--VENTANA MODAL-->
     <div class="content" id="modal">
         <div class="popup">
@@ -97,6 +87,15 @@
             <a href="#" class="btn-close-popup">X</a>
         </div>
     </div>
+
+    <section class="wave-contenedor website">
+        <img src="img/ilustracion1.jpg" alt="">
+        <div class="contenedor-textos-main">
+            <h2 class="titulo left">Greatest Hits</h2>
+            <p class="parrafo">Podrás ver videos y escuchar
+                gran variedad de artistas que estan sonando actualmente en todas las estaciones de radio!</p>
+        </div>
+    </section>
 
     <!--SLIDER DE CONTENIDO-->
     <div class="contenedor">
@@ -140,31 +139,40 @@
     <div id="eventos"></div>
     <section class="eventos">
         <div class="contenedor">
-            <h2 class="titulo">Mantente al tando de eventos cerca de ti</h2>
+            <h2 class="titulo">Mantente al tanto de eventos cerca de ti</h2>
             <article class="eventos-cont">
 
                 <!--Eventos Cerca-->
                 <img src="img/calendario.png" alt="calendario" height="50%" width="60%">
-
+                <br>
                 <a class="twitter-timeline" data-width="700" data-height="440" data-theme="dark"
                     href="https://twitter.com/backstagemcr?ref_src=twsrc%5Etfw">Tweets by backstagemcr</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
-                <h2 class="titulo">y las últimas noticias del mundo musical.</h2><br>
-                <a class="twitter-timeline" data-width="700" data-height="440" data-theme="ligth"
-                    href="https://twitter.com/thebackstageweb">Tweets by thebackstageweb</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </article>
+        </div>
+    </section>
 
 
-                <!--Script para introducir el boton me gusta de facebook-->
+    <div id="eventos"></div>
+    <section class="eventos">
+        <h2 class="titulo-2">y las últimas noticias del mundo musical.</h2>
+        <div class="contenedor-2">
+            <article class="eventos-cont"></article>
+            <br>
+            <a class="twitter-timeline" data-width="700" data-height="440" data-theme="ligth"
+                href="https://twitter.com/thebackstageweb">Tweets by thebackstageweb</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-                <div id="fb-root"></div>
-                <script async defer crossorigin="anonymous"
-                    src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
-                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="500"
-                    data-layout="standard" data-action="like" data-size="small" data-share="true">
-                </div>
+
+            <!--Script para introducir el boton me gusta de facebook-->
+
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="500"
+                data-layout="standard" data-action="like" data-size="small" data-share="true">
+            </div>
 
             </article>
         </div>
@@ -173,7 +181,7 @@
     <section class="info-last">
         <div class="contenedor last-section">
             <div class="contenedor-textos-main">
-                <h2 class="titulo left">Úbicanos</h2>
+                <h2 class="titulo left">Ubícanos</h2>
                 <p class="parrafo">Podrás ubicar nuestras oficinas desde Google Maps.</p>
 
                 <div id="map" style="width:500px; height:315px;" class="mapa">
@@ -269,7 +277,7 @@
                     }
                 </script>
             </div>
-            <img src="img/ubicacion.png" alt="ubicación" height="50%" width="60%">
+            <img src="img/ubicacion.jpg" alt="ubicación" height="200px" width="150px">
         </div>
 
         <div class="svg-wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
@@ -297,12 +305,15 @@
                 </select>
                 <textarea class="input" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"
                     required></textarea>
-                    <p>
-                        Seleccione su género:<br>
-                        <label><input type="radio" name="genero" value="masculino" class="input"  id="genero" require> Masculino</label><br>
-                        <label><input type="radio" name="genero" value="femenino" class="input"   id="genero" require> Femenino</label><br>
-                        <label><input type="radio" name="genero" value="indefinido" class="input" id="genero" require> Indefinido</label>
-                      </p><br><br>
+                <p>
+                    Seleccione su género:<br>
+                    <label><input type="radio" name="genero" value="masculino" class="input" id="genero" require>
+                        Masculino</label><br>
+                    <label><input type="radio" name="genero" value="femenino" class="input" id="genero" require>
+                        Femenino</label><br>
+                    <label><input type="radio" name="genero" value="indefinido" class="input" id="genero" require>
+                        Indefinido</label>
+                </p><br><br>
                 <input class="input" type="submit" id="btnsend" value="Enviar">
             </form>
         </div>

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cmp.osano.com/16BZ9HRuIUC3J2qhP/f23a4cd0-a5b2-4c74-94fa-23a58f4536c7/osano.js"></script>
 
     <script src="js/jquery-3.2.1.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -139,40 +140,31 @@
     <div id="eventos"></div>
     <section class="eventos">
         <div class="contenedor">
-            <h2 class="titulo">Mantente al tanto de eventos cerca de ti</h2>
+            <h2 class="titulo">Mantente al tando de eventos cerca de ti</h2>
             <article class="eventos-cont">
 
                 <!--Eventos Cerca-->
-                <img src="img/calendario.png" alt="calendario" height="50%" width="60%">
-                <br>
+                <img src="img/calendario.png" alt="" height="50%" width="60%">
+
                 <a class="twitter-timeline" data-width="700" data-height="440" data-theme="dark"
                     href="https://twitter.com/backstagemcr?ref_src=twsrc%5Etfw">Tweets by backstagemcr</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-            </article>
-        </div>
-    </section>
+
+                <h2 style="padding: 50px;" class="titulo">y las últimas noticias del mundo musical.</h2><br>
+                <a class="twitter-timeline" data-width="700" data-height="440" data-theme="ligth"
+                    href="https://twitter.com/thebackstageweb">Tweets by thebackstageweb</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-    <div id="eventos"></div>
-    <section class="eventos">
-        <h2 class="titulo-2">y las últimas noticias del mundo musical.</h2>
-        <div class="contenedor-2">
-            <article class="eventos-cont"></article>
-            <br>
-            <a class="twitter-timeline" data-width="700" data-height="440" data-theme="ligth"
-                href="https://twitter.com/thebackstageweb">Tweets by thebackstageweb</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <!--Script para introducir el boton me gusta de facebook-->
 
-
-            <!--Script para introducir el boton me gusta de facebook-->
-
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous"
-                src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="500"
-                data-layout="standard" data-action="like" data-size="small" data-share="true">
-            </div>
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous"
+                    src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="500"
+                    data-layout="standard" data-action="like" data-size="small" data-share="true">
+                </div>
 
             </article>
         </div>
@@ -211,8 +203,6 @@
                         alert('La ubicación no pudo ser accesada debido a que ' + msj)
                     }
 
-
-
                     function fn_ok(respuesta) {
                         var lat = respuesta.coords.latitude;
                         var lon = respuesta.coords.longitude;
@@ -221,7 +211,89 @@
                         var gLatLonFijo = new google.maps.LatLng(9.98817, -84.2434);  //Punto 10.056998, -84.274898
                         var objConfig = {
                             zoom: 5,
-                            center: gLatLonFijo
+                            center: gLatLonFijo,
+                            styles: [
+                                { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+                                { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+                                { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+                                {
+                                    featureType: 'administrative.locality',
+                                    elementType: 'labels.text.fill',
+                                    stylers: [{ color: '#d59563' }]
+                                },
+                                {
+                                    featureType: 'poi',
+                                    elementType: 'labels.text.fill',
+                                    stylers: [{ color: '#d59563' }]
+                                },
+                                {
+                                    featureType: 'poi.park',
+                                    elementType: 'geometry',
+                                    stylers: [{ color: '#263c3f' }]
+                                },
+                                {
+                                    featureType: 'poi.park',
+                                    elementType: 'labels.text.fill',
+                                    stylers: [{ color: '#6b9a76' }]
+                                },
+                                {
+                                    featureType: 'road',
+                                    elementType: 'geometry',
+                                    stylers: [{ color: '#38414e' }]
+                                },
+                                {
+                                    featureType: 'road',
+                                    elementType: 'geometry.stroke',
+                                    stylers: [{ color: '#212a37' }]
+                                },
+                                {
+                                    featureType: 'road',
+                                    elementType: 'labels.text.fill',
+                                    stylers: [{ color: '#9ca5b3' }]
+                                },
+                                {
+                                    featureType: 'road.highway',
+                                    elementType: 'geometry',
+                                    stylers: [{ color: '#746855' }]
+                                },
+                                {
+                                    featureType: 'road.highway',
+                                    elementType: 'geometry.stroke',
+                                    stylers: [{ color: '#1f2835' }]
+                                },
+                                {
+                                    featureType: 'road.highway',
+                                    elementType: 'labels.text.fill',
+                                    stylers: [{ color: '#f3d19c' }]
+                                },
+                                {
+                                    featureType: 'transit',
+                                    elementType: 'geometry',
+                                    stylers: [{ color: '#2f3948' }]
+                                },
+                                {
+                                    featureType: 'transit.station',
+                                    elementType: 'labels.text.fill',
+                                    stylers: [{ color: '#d59563' }]
+                                },
+                                {
+                                    featureType: 'water',
+                                    elementType: 'geometry',
+                                    stylers: [{ color: '#17263c' }]
+                                },
+                                {
+                                    featureType: 'water',
+                                    elementType: 'labels.text.fill',
+                                    stylers: [{ color: '#515c6d' }]
+                                },
+                                {
+                                    featureType: 'water',
+                                    elementType: 'labels.text.stroke',
+                                    stylers: [{ color: '#17263c' }]
+                                }
+                            ]
+
+
                         }
                         var gMapa = new google.maps.Map(divMapa, objConfig);
                         var objConfigMarkerFijo = {
@@ -277,7 +349,7 @@
                     }
                 </script>
             </div>
-            <img src="img/ubicacion.jpg" alt="ubicación" height="200px" width="150px">
+            <img src="img/ubicacion.jpg" alt="ubicación">
         </div>
 
         <div class="svg-wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
@@ -305,20 +377,20 @@
                 </select>
                 <textarea class="input" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"
                     required></textarea>
-                    Seleccione su género:<br>
-                    <label><input type="radio" name="genero" value="masculino" class="input" id="genero" require>
-                        Masculino</label><br>
-                    <label><input type="radio" name="genero" value="femenino" class="input" id="genero" require>
-                        Femenino</label><br>
-                    <label><input type="radio" name="genero" value="indefinido" class="input" id="genero" require>
-                        Indefinido</label>
+                <p>
+                Seleccione su género:<br>
+                <label><input type="radio" name="genero" value="masculino" class="input" id="genero" require>
+                    Masculino</label><br>
+                <label><input type="radio" name="genero" value="femenino" class="input" id="genero" require>
+                    Femenino</label><br>
+                <label><input type="radio" name="genero" value="indefinido" class="input" id="genero" require>
+                    Indefinido</label>
                 </p><br><br>
                 <input class="input" type="submit" id="btnsend" value="Enviar">
             </form>
         </div>
         <script src="js/contacto.js"></script>
     </footer>
-    <script src="https://cmp.osano.com/16BZ9HRuIUC3J2qhP/f23a4cd0-a5b2-4c74-94fa-23a58f4536c7/osano.js"></script>
 </body>
 
 </html>

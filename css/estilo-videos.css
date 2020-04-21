@@ -82,6 +82,29 @@ input[type="submit"]:hover{
     background: #fff;
 }
 
+.svg-hero-footer{
+    position: static;
+    left:0px;
+    bottom: 0px;
+    height: 30px;
+    width:100%;
+ }
+ 
+ .footer {
+     position: static;
+     justify-content: center;
+     bottom: 0px;
+     width: 100%;
+     height: 180px;
+     color: #fff;
+     background-color:  rgb(46, 44, 44);
+     z-index: 999;
+ }
+ 
+ .form_buscador{
+     margin-left: 20px;
+ }
+
 @media screen and (max-width:800px){
     .textos-hero h1{
         text-align: center;

@@ -55,8 +55,10 @@
 
 
 .img{
-    width: 10%;
-    background-image: url();
+    width: 40%;
+    height: 100%;
+    margin-top: 0px;
+    background-image: url("/img/Info-personal.png");
     background-size: cover;
     background-position: center;
 }

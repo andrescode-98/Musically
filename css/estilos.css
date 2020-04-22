@@ -153,6 +153,10 @@ body{
     overflow: hidden;
 }
 
+.imagen-calendario{
+    margin-left: 20px;
+}
+
 /* info2 */
 
 .last-section{

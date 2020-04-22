@@ -231,6 +231,7 @@ input[type="submit"]:hover{
     background: #fff;
 }
 
+
 @media screen and (max-width:800px){
     .textos-hero h1{
         text-align: center;
